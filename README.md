@@ -34,6 +34,14 @@ Options:
 	-h, --help
 		Show this help message and exit
 
+## Example
+
+A demo data of chrmosome 19 form mESC HindIII HiC data is in the data folder. The data is from Fraser, J. et al. Molecular Systems Biology (2015).
+
+```
+Rscript HiCNorm.R -i data/mESC.HindIII.raw.chr19.txt -o data/mESC.HindIII.HiCNorm.chr19.txt -f data/F_GC_M_Hind3_50Kb_el.chr19.txt
+```
+
 ## Genomic Feature Files
 Genomic feature files for GRCh38, hg19, mm10, and mm9 can be found at [here](http://enhancer.sdsc.edu/yunjiang/resources/genomic_features/).
 
