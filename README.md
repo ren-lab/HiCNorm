@@ -1,7 +1,7 @@
 # HiCNorm
 Scripts to run HiCNorm  
 
-##Usage
+## Usage
 
 Rscript HiCNorm.R [options]
 
