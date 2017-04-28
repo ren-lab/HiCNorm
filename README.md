@@ -1,7 +1,9 @@
 # HiCNorm
 Scripts to run HiCNorm  
 
-Usage: Rscript HiCNorm.R [options]
+##Usage
+
+Rscript HiCNorm.R [options]
 
 Options:
 	
@@ -31,3 +33,6 @@ Options:
 
 	-h, --help
 		Show this help message and exit
+
+## Genomic Feature Files
+Genomic feature files for GRCh38, hg19, mm10, and mm9 can be found at http://enhancer.sdsc.edu/yunjiang/resources/genomic_features/.
