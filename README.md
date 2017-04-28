@@ -35,4 +35,10 @@ Options:
 		Show this help message and exit
 
 ## Genomic Feature Files
-Genomic feature files for GRCh38, hg19, mm10, and mm9 can be found at http://enhancer.sdsc.edu/yunjiang/resources/genomic_features/.
+Genomic feature files for GRCh38, hg19, mm10, and mm9 can be found at -here](http://enhancer.sdsc.edu/yunjiang/resources/genomic_features/).
+
+## Citation
+
+If you use HiCNorm, please cite the following paper:
+
+- Hu M, Deng K, Selvaraj S, Qin ZS, Ren B and Liu JS (2012) HiCNorm: removing biases in Hi-C data via Poisson regression. (2012) Bioinformatics 28 (23), 3131-3133.
