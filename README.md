@@ -35,7 +35,7 @@ Options:
 		Show this help message and exit
 
 ## Genomic Feature Files
-Genomic feature files for GRCh38, hg19, mm10, and mm9 can be found at -here](http://enhancer.sdsc.edu/yunjiang/resources/genomic_features/).
+Genomic feature files for GRCh38, hg19, mm10, and mm9 can be found at [here](http://enhancer.sdsc.edu/yunjiang/resources/genomic_features/).
 
 ## Citation
 
