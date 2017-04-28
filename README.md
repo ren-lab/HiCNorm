@@ -4,6 +4,7 @@ Scripts to run HiCNorm
 Usage: Rscript HiCNorm.R [options]
 
 Options:
+	
 	-i INPUT, --input=INPUT
 		raw HiC matrix
 
