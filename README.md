@@ -1,33 +1,32 @@
 # HiCNorm
 Scripts to run HiCNorm  
 
-Usage: HiCNorm.R [options]
-
+Usage: Rscript HiCNorm.R [options]
 
 Options:
-    -i INPUT, --input=INPUT
-            raw HiC matrix
+	-i INPUT, --input=INPUT
+		raw HiC matrix
 
-                -o OUTPUT, --output=OUTPUT
-                        normalized HiC matrix
+	-o OUTPUT, --output=OUTPUT
+		normalized HiC matrix
 
-                            -f GENOMIC_FEATURE, --genomic_feature=GENOMIC_FEATURE
-                                    genomic feature file
+	-f GENOMIC_FEATURE, --genomic_feature=GENOMIC_FEATURE
+		genomic feature file
 
-                                        -c COV, --cov=COV
-                                                minimun coverage [default 1]
+	-c COV, --cov=COV
+		minimun coverage [default 1]
 
-                                                    -l LEN, --len=LEN
-                                                            minimun fragment length [default 0.1]
+	-l LEN, --len=LEN
+		minimun fragment length [default 0.1]
 
-                                                                -s GC, --gc=GC
-                                                                        minimum gc content [default 0.3]
+	-s GC, --gc=GC
+		minimum gc content [default 0.3]
 
-                                                                            -m MAP, --map=MAP
-                                                                                    minimum mappability [default 0.8]
+	-m MAP, --map=MAP
+		minimum mappability [default 0.8]
 
-                                                                                        -n, --negative_binomial
-                                                                                                use negative binomial regression
+	-n, --negative_binomial
+		use negative binomial regression
 
-                                                                                                    -h, --help
-                                                                                                            Show this help message and exit
+	-h, --help
+		Show this help message and exit
