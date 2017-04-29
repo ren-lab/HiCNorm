@@ -50,3 +50,7 @@ Genomic feature files for GRCh38, hg19, mm10, and mm9 can be found at [here](htt
 If you use HiCNorm, please cite the following paper:
 
 - Hu M, Deng K, Selvaraj S, Qin ZS, Ren B and Liu JS (2012) HiCNorm: removing biases in Hi-C data via Poisson regression. (2012) Bioinformatics 28 (23), 3131-3133.
+
+## Contact
+
+For any questions or comments, please contact Ming Hu(afhuming@gmail.com) or Yunjiang Qiu(yuq003@ucsd.edu).
