@@ -36,6 +36,10 @@ Options:
 
 ## Input and Output Format
 
+Input matrix file contains four columns: chromosome, first bin, second bin, and raw counts. 
+Input genomic feature files contain six columns: chromosome, bin start position, bin end position, fragment length, GC content, and mappbility.
+Output matrix file cotains four columns: chromosome, first bin, second bin, and normalized counts. 
+
 ## Example
 
 A demo data of chrmosome 19 form mESC HindIII HiC data is in the data folder. The data is from Fraser, J. et al. Molecular Systems Biology (2015).
