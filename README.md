@@ -17,10 +17,10 @@ Options:
 		genomic feature file
 
 	-c COV, --cov=COV
-		minimun coverage [default 1]
+		minimum coverage [default 1]
 
 	-l LEN, --len=LEN
-		minimun fragment length [default 0.1]
+		minimum effective fragment length fraction of the bin [default 0.1]
 
 	-s GC, --gc=GC
 		minimum gc content [default 0.3]
