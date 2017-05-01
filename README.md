@@ -34,6 +34,8 @@ Options:
 	-h, --help
 		Show this help message and exit
 
+## Input and Output Format
+
 ## Example
 
 A demo data of chrmosome 19 form mESC HindIII HiC data is in the data folder. The data is from Fraser, J. et al. Molecular Systems Biology (2015).
