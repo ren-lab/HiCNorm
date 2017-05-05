@@ -47,7 +47,7 @@ if ( !file.exists(map_in) ) {
 
 genomic_features <- read.table(genomic_features_in,head=F, sep="\t", colClasses=c("factor",rep("numeric",5)))
 colnames(genomic_features) <- c('chr', 'bin1', 'bin2', 'len', 'gc', 'map')
-genomic_features <- genomic_features[genomic_features$len/(genomic_features$bin2-genomic_features$bin1)>=min_len & genomic_features$gc>=min_gc & genomic_features$map>=min_map, ]
+genomic_features <- genomic_features[genomic_features$len>0, ]
 
 map <- read.table(map_in, head=F)
 colnames(map) <- c('chr', 'bin1', 'bin2', 'raw')
@@ -64,7 +64,9 @@ for (chr in chr_id) {
 
 			genomic_features_chr <- genomic_features[which(genomic_features$chr==chr),]
 			map_chr <- map[which(map$chr==chr),]
-
+			#select bins with confident genomic features to build model
+			conf_bins <- which(genomic_features_chr$len/(genomic_features_chr$bin2-genomic_features_chr$bin1)>=min_len & genomic_features_chr$gc>=min_gc & genomic_features_chr$map>=min_map) 
+			
 			ind1 <- match(map_chr$bin1,genomic_features_chr$bin1)
 			ind2 <- match(map_chr$bin2,genomic_features_chr$bin1)
 
@@ -74,7 +76,7 @@ for (chr in chr_id) {
 
 			res <- map_chr
     
-			map_fit <- map_chr[!is.na(map_chr$len) & map_chr$raw > min_cov,]
+			map_fit <- map_chr[!is.na(map_chr$len) & map_chr$raw > min_cov & ind1 %in% conf_bins & ind2 %in% conf_bins,]
 			map_chr$len <- (map_chr$len - mean(map_fit$len)) / sd(map_fit$len)
 			map_chr$gc <- (map_chr$gc - mean(map_fit$gc)) / sd(map_fit$gc)
     
