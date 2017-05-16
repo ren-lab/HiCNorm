@@ -11,7 +11,7 @@ option_list = list(
               help = "normalized HiC matrix"),
   make_option(c("-f", "--genomic_feature"), type = "character", default = NA,
               help = "genomic feature file"),
-  make_option(c("-c", "--cov"), type = "integer", default = 1,
+  make_option(c("-c", "--cov"), type = "integer", default = 2,
               help = "minimum coverage [default %default]"),
   make_option(c("-l", "--len"), type = "double", default = 0.1,
               help = "minimum effective fragment length fraction of the bin [default %default]"),
@@ -47,7 +47,7 @@ if ( !file.exists(map_in) ) {
 
 genomic_features <- read.table(genomic_features_in,head=F, sep="\t", colClasses=c("factor",rep("numeric",5)))
 colnames(genomic_features) <- c('chr', 'bin1', 'bin2', 'len', 'gc', 'map')
-genomic_features <- genomic_features[genomic_features$len>0, ]
+genomic_features <- genomic_features[genomic_features$len>0 & genomic_features$gc>0 & genomic_features$map>0, ]
 
 map <- read.table(map_in, head=F)
 colnames(map) <- c('chr', 'bin1', 'bin2', 'raw')
@@ -76,7 +76,7 @@ for (chr in chr_id) {
 
 			res <- map_chr
     
-			map_fit <- map_chr[!is.na(map_chr$len) & map_chr$raw > min_cov & ind1 %in% conf_bins & ind2 %in% conf_bins,]
+			map_fit <- map_chr[!is.na(map_chr$len) & map_chr$raw >= min_cov & ind1 %in% conf_bins & ind2 %in% conf_bins,]
 			map_chr$len <- (map_chr$len - mean(map_fit$len)) / sd(map_fit$len)
 			map_chr$gc <- (map_chr$gc - mean(map_fit$gc)) / sd(map_fit$gc)
     
