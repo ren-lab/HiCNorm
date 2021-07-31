@@ -59,4 +59,4 @@ If you use HiCNorm, please cite the following paper:
 
 ## Contact
 
-For any questions or comments, please contact Ming Hu(afhuming@gmail.com) or Yunjiang Qiu(yuq003@ucsd.edu).
+For any questions or comments, please contact [Ming Hu](mailto:afhuming@gmail.com) or [Yunjiang Qiu](mailto:yuq003@eng.ucsd.edu).
